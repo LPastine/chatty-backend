@@ -21,6 +21,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@bull-board/api": "^5.8.1",
     "@bull-board/express": "^5.8.0",
     "@faker-js/faker": "^8.0.2",
     "@jest/types": "^29.6.3",
