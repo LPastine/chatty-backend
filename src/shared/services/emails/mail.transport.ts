@@ -28,8 +28,8 @@ class MailTransport {
   private async developmentEmailSender(receiverEmail: string, subject: string, body: string): Promise<void> {
     const transporter: Mail = nodemailer.createTransport({
       host: 'smtp.ethereal.email',
-      port: 465,
-      secure: true,
+      port: 587,
+      secure: false,
       auth: {
         user: config.SENDER_EMAIL,
         pass: config.SENDER_EMAIL_PASSWORD
