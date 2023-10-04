@@ -1,7 +1,7 @@
 import { ObjectId } from 'mongodb';
 import mongoose, { Document } from 'mongoose';
 
-// TODO - Move this to reactions interface later
+// TO DO - Move this to reactions interface later
 interface IReactions {
   like: number;
   love: number;
