@@ -8,7 +8,7 @@ Accept: application/json
 withCredentials: true
 
 {
-  "username": "LPastine",
+  "username": "Lpastine",
   "password": "karlinha",
   "email": "lucianopastine.tech@gmail.com",
   "avatarColor": "red",
@@ -22,7 +22,7 @@ Accept: application/json
 withCredentials: true
 
 {
-  "username": "LPastine",
+  "username": "Lpastine",
   "password": "karlinha"
 }
 
@@ -37,3 +37,24 @@ GET {{baseUrl}}/{{urlPath}}/currentuser
 Content-Type: application/json
 Accept: application/json
 withCredentials: true
+
+###
+POST {{baseUrl}}/{{urlPath}}/forgot-password
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "email": "lucianopastine.tech@gmail.com"
+}
+
+###
+POST {{baseUrl}}/{{urlPath}}/reset-password/912d5505575ccb859262177264e6dc5ca5c9c1f0
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "password": "karlinha123",
+  "confirmPassword": "karlinha123"
+}
