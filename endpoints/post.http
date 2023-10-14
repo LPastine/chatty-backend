@@ -50,3 +50,20 @@ DELETE {{baseUrl}}/{{urlPath}}/post/6529ce79947616edccdeb8ed
 Content-Type: application/json
 Accept: application/json
 withCredentials: true
+
+###
+PUT {{baseUrl}}/{{urlPath}}/post/6529e275e405bfa89fe2ee5d
+Content-Type: application/json
+Accept: application/json
+withCredentials: true,
+
+{
+  "post": "This post is updated",
+  "bgColor": "#4aa1f3",
+  "privacy": "Public",
+  "gifUrl": "",
+  "profilePicture": "http://res.cloudinary.com/dhta9awgo/image/upload/v1695675720/6511f546dfe510c8e151fdb5",
+  "feelings": "",
+  "imgId": "",
+  "imgVersion": ""
+}
