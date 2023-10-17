@@ -61,11 +61,11 @@ class ReactionService {
     return reactions.length ? [reactions[0], 1] : [];
   }
 
-  public async getReactionsByUsername(postId: string, username: string): Promise<[IReactionDocument, number] | []> {
+  public async getReactionsByUsername(username: string): Promise<IReactionDocument[]> {
     const reactions: IReactionDocument[] = await ReactionModel.aggregate([
       { $match: { username: Helpers.firstLetterUppercase(username) } }
     ]);
-    return reactions.length ? [reactions[0], 1] : [];
+    return reactions;
   }
 }
 
