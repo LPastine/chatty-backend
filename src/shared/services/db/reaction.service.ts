@@ -10,7 +10,7 @@ const userCache: UserCache = new UserCache();
 class ReactionService {
   public async addReactionDataToDB(reactionData: IReactionJob): Promise<void> {
     const { postId, userTo, userFrom, username, type, previousReaction, reactionObject } = reactionData;
-    const updatedReaction: [IUserDocument, IReactionDocument, IPostDocument] = await Promise.all([
+    const updatedReaction: [IUserDocument, IReactionDocument, IPostDocument] = (await Promise.all([
       userCache.getUserFromCache(`${userTo}`),
       ReactionModel.replaceOne({ postId, type: previousReaction, username }, reactionObject, { upsert: true }),
       PostModel.findOneAndUpdate(
@@ -19,6 +19,22 @@ class ReactionService {
           $inc: {
             [`reactions.${previousReaction}`]: -1,
             [`reactions.${type}`]: 1
+          }
+        },
+        { new: true }
+      )
+    ])) as [IUserDocument, IReactionDocument, IPostDocument];
+  }
+
+  public async removeReactionDataFromDB(reactionData: IReactionJob): Promise<void> {
+    const { postId, previousReaction, username } = reactionData;
+    await Promise.all([
+      ReactionModel.deleteOne({ postId, type: previousReaction, username }),
+      PostModel.updateOne(
+        { _id: postId },
+        {
+          $inc: {
+            [`reactions.${previousReaction}`]: -1
           }
         },
         { new: true }
