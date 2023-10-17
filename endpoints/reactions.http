@@ -9,9 +9,17 @@ withCredentials: true
 
 {
   "userTo": "6511f546dfe510c8e151fdb5",
-  "postId": "652dd543f73718f485dccb24",
+  "postId": "ccccccccc",
   "type": "like",
-  "previousReaction": "love",
+  "previousReaction": "",
   "postReactions": {"like": 1,"love": 0,"happy": 0,"sad": 0,"wow": 0,"angry": 0},
   "profilePicture": "http://res.cloudinary.com/dhta9awgo/image/upload/v1695675720/6511f546dfe510c8e151fdb5"
 }
+
+###
+DELETE {{baseUrl}}/{{urlPath}}/post/reaction/652ee1a954eda89ba63f59d5/like/{"like": 0,"love": 0,"happy": 0,"sad": 0,"wow": 0,"angry": 0}
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{}
