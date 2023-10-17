@@ -4,15 +4,20 @@ import { IReactionDocument, IReactionJob } from '@reaction/interfaces/reaction.i
 import { ReactionModel } from '@reaction/models/reaction.schema';
 import { UserCache } from '@service/redis/user.cache';
 import { IUserDocument } from '@user/interfaces/user.interface';
+import { omit } from 'lodash';
 
 const userCache: UserCache = new UserCache();
 
 class ReactionService {
   public async addReactionDataToDB(reactionData: IReactionJob): Promise<void> {
     const { postId, userTo, userFrom, username, type, previousReaction, reactionObject } = reactionData;
+    let updatedReactionObject: IReactionDocument = reactionObject as IReactionDocument;
+    if (previousReaction) {
+      updatedReactionObject = omit(reactionObject, ['_id']);
+    }
     const updatedReaction: [IUserDocument, IReactionDocument, IPostDocument] = (await Promise.all([
       userCache.getUserFromCache(`${userTo}`),
-      ReactionModel.replaceOne({ postId, type: previousReaction, username }, reactionObject, { upsert: true }),
+      ReactionModel.replaceOne({ postId, type: previousReaction, username }, updatedReactionObject, { upsert: true }),
       PostModel.findOneAndUpdate(
         { _id: postId },
         {
@@ -23,7 +28,7 @@ class ReactionService {
         },
         { new: true }
       )
-    ])) as [IUserDocument, IReactionDocument, IPostDocument];
+    ])) as unknown as [IUserDocument, IReactionDocument, IPostDocument];
   }
 
   public async removeReactionDataFromDB(reactionData: IReactionJob): Promise<void> {
