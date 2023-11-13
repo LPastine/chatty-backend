@@ -7,6 +7,7 @@ import { UserCache } from '@service/redis/user.cache';
 import { IUserDocument } from '@user/interfaces/user.interface';
 import mongoose, { Query } from 'mongoose';
 import { INotificationDocument } from '@notification/interfaces/notification.interface';
+import { socketIONotificationObject } from '@socket/notification.sockets';
 
 const userCache: UserCache = new UserCache();
 
@@ -40,8 +41,7 @@ class CommentService {
         reaction: ''
       });
 
-      // TO DO - Send to client with socketio
-
+      socketIONotificationObject.emit('insert notification', notifications, { userTo });
       // TO DO - Send to email queue
     }
   }
