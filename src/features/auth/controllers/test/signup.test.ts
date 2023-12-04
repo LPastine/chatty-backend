@@ -5,7 +5,7 @@ import * as cloudinaryUploads from '@global/helpers/cloudinary-upload';
 import { authMock, authMockRequest, authMockResponse } from '@root/mocks/auth.mock';
 import { CustomError } from '@global/helpers/error-handler';
 import { authService } from '@service/db/auth.service';
-import { UserCache } from '@service/redis/user.cache';
+import UserCache from '@service/redis/user.cache';
 
 jest.mock('@service/queues/base.queue');
 jest.mock('@service/redis/user.cache');

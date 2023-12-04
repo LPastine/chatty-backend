@@ -7,7 +7,7 @@ import { IQueryReaction, IReactionDocument, IReactionJob } from '@reaction/inter
 import { ReactionModel } from '@reaction/models/reaction.schema';
 import { notificationTemplate } from '@service/emails/templates/notifications/notification-template';
 import { emailQueue } from '@service/queues/email.queue';
-import { UserCache } from '@service/redis/user.cache';
+import UserCache from '@service/redis/user.cache';
 import { socketIONotificationObject } from '@socket/notification.sockets';
 import { IUserDocument } from '@user/interfaces/user.interface';
 import { omit } from 'lodash';

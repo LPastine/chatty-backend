@@ -10,7 +10,7 @@ import { NotificationModel } from '@notification/models/notification.schema';
 import { socketIONotificationObject } from '@socket/notification.sockets';
 import { notificationTemplate } from '@service/emails/templates/notifications/notification-template';
 import { emailQueue } from '@service/queues/email.queue';
-import { UserCache } from '@service/redis/user.cache';
+import UserCache from '@service/redis/user.cache';
 
 const userCache: UserCache = new UserCache();
 

@@ -3,7 +3,7 @@ import { ICommentDocument, ICommentJob, ICommentNameList, IQueryComment } from '
 import { CommentsModel } from '@comment/models/comment.schema';
 import { IPostDocument } from '@post/interfaces/post.interface';
 import { PostModel } from '@post/models/post.schema';
-import { UserCache } from '@service/redis/user.cache';
+import UserCache from '@service/redis/user.cache';
 import { IUserDocument } from '@user/interfaces/user.interface';
 import mongoose, { Query } from 'mongoose';
 import { INotificationDocument, INotificationTemplate } from '@notification/interfaces/notification.interface';

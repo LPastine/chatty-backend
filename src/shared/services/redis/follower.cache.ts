@@ -3,7 +3,7 @@ import { BaseCache } from '@service/redis/base.cache';
 import { config } from '@root/config';
 import { ServerError } from '@global/helpers/error-handler';
 import { IFollowerData } from '@follower/interfaces/follower.interface';
-import { UserCache } from './user.cache';
+import UserCache from './user.cache';
 import { IUserDocument } from '@user/interfaces/user.interface';
 import mongoose from 'mongoose';
 import { remove } from 'lodash';
