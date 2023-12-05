@@ -20,3 +20,15 @@ withCredentials: true
 {
   "image": "http://res.cloudinary.com/dhta9awgo/image/upload/v1699482975/654c0d5eb5d9c323b32a24b1"
 }
+
+###
+DELETE {{baseUrl}}/{{urlPath}}/images/656e7e08088e07dca416b3a0
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+DELETE {{baseUrl}}/{{urlPath}}/images/background/654c0d5eb5d9c323b32a24b1
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
