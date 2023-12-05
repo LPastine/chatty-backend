@@ -10,7 +10,7 @@ import { UploadApiResponse } from 'cloudinary';
 import { uploads } from '@global/helpers/cloudinary-upload';
 import HTTP_STATUS from 'http-status-codes';
 import { IUserDocument } from '@user/interfaces/user.interface';
-import { UserCache } from '@service/redis/user.cache';
+import UserCache from '@service/redis/user.cache';
 import { config } from '@root/config';
 import JWT from 'jsonwebtoken';
 import { authQueue } from '@service/queues/auth.queue';

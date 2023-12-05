@@ -21,12 +21,16 @@ export class Helpers {
     return parseInt(result, 10);
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  static parseJson(prop: string): any {
+  static parseJson(prop: string) {
     try {
       return JSON.parse(prop);
     } catch (error) {
       return prop;
     }
+  }
+
+  static isDataURL(value: string): boolean {
+    const dataUrlRegex = /^\s*data:([a-z]+\/[a-z0-9-+.]+(;[a-z-]+=[a-z0-9-]+)?)?(;base64)?,([a-z0-9!$&',()*+;=\-._~:@\\/?%\s]*)\s*$/i;
+    return dataUrlRegex.test(value);
   }
 }

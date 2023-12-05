@@ -6,7 +6,7 @@ import { followersMockRequest, followersMockResponse } from '@root/mocks/followe
 import { existingUser } from '@root/mocks/user.mock';
 import { followerQueue } from '@service/queues/follower.queue';
 import { Add } from '@follower/controllers/follower-user';
-import { UserCache } from '@service/redis/user.cache';
+import UserCache from '@service/redis/user.cache';
 import { FollowerCache } from '@service/redis/follower.cache';
 
 jest.useFakeTimers();
