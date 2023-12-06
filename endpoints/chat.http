@@ -13,9 +13,9 @@ withCredentials: true
   "receiverUsername": "Luciano4",
   "receiverAvatarColor": "red",
   "receiverProfilePicture": "http://res.cloudinary.com/dhta9awgo/image/upload/v1699482975/654c0d5eb5d9c323b32a24b1",
-  "body": "test",
+  "body": "This is another message",
   "gifUrl": "",
-  "isRead": false,
+  "isRead": true,
   "selectedImage": ""
 }
 
@@ -32,6 +32,12 @@ withCredentials: true
 
 ###
 GET {{baseUrl}}/{{urlPath}}/chat/message/conversation-list
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+GET {{baseUrl}}/{{urlPath}}/chat/message/user/656fc181a3fb2f705ea60ef3
 Content-Type: application/json
 Accept: application/json
 withCredentials: true
