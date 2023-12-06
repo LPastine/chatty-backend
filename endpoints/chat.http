@@ -9,11 +9,11 @@ withCredentials: true
 
 {
   "conversationId": "",
-  "receiverId": "654c0d5eb5d9c323b32a24b0",
-  "receiverUsername": "Luciano1",
+  "receiverId": "656fc181a3fb2f705ea60ef3",
+  "receiverUsername": "Luciano4",
   "receiverAvatarColor": "red",
   "receiverProfilePicture": "http://res.cloudinary.com/dhta9awgo/image/upload/v1699482975/654c0d5eb5d9c323b32a24b1",
-  "body": "Hello. How are you?",
+  "body": "test",
   "gifUrl": "",
   "isRead": false,
   "selectedImage": ""
