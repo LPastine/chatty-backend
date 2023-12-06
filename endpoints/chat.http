@@ -47,3 +47,14 @@ DELETE {{baseUrl}}/{{urlPath}}/chat/message/mark-as-deleted/6570d21911bfbad19c24
 Content-Type: application/json
 Accept: application/json
 withCredentials: true
+
+###
+PUT {{baseUrl}}/{{urlPath}}/chat/message/mark-as-read
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "senderId": "656fc181a3fb2f705ea60ef3",
+  "receiverId": "656fc181a3fb2f705ea60ef3"
+}
