@@ -18,3 +18,9 @@ GET {{baseUrl}}/{{urlPath}}/user/profile/posts/Luciano5/6578ddefddf3cab45e46a8da
 Content-Type: application/json
 Accept: application/json
 withCredentials: true
+
+###
+GET {{baseUrl}}/{{urlPath}}/user/profile/user/suggestions
+Content-Type: application/json
+Accept: application/json
+withCredentials: true

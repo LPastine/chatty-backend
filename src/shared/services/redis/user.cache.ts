@@ -180,7 +180,7 @@ export default class UserCache extends BaseCache {
       for (const key of randomUsers) {
         const followerIndex = indexOf(followers, key);
         if (followerIndex < 0) {
-          const userHash: IUserDocument = (await this.client.HGETALL(`users:${key}`)) as unkown as IUserDocument;
+          const userHash: IUserDocument = (await this.client.HGETALL(`users:${key}`)) as unknown as IUserDocument;
           replies.push(userHash);
         }
       }
