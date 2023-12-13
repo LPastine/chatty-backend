@@ -1,0 +1,83 @@
+@baseUrl = http://localhost:5000
+@urlPath = api/v1
+
+###
+GET {{baseUrl}}/{{urlPath}}/user/all/1
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+GET {{baseUrl}}/{{urlPath}}/user/profile/6578ddefddf3cab45e46a8da
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+GET {{baseUrl}}/{{urlPath}}/user/profile/posts/Luciano5/6578ddefddf3cab45e46a8da/721946793973
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+GET {{baseUrl}}/{{urlPath}}/user/profile/user/suggestions
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+GET {{baseUrl}}/{{urlPath}}/user/profile/search/Luciano
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+PUT {{baseUrl}}/{{urlPath}}/user/profile/change-password
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "currentPassword": "karlinha",
+  "newPassword": "karla111",
+  "confirmPassword": "karla111"
+}
+
+###
+PUT {{baseUrl}}/{{urlPath}}/user/profile/basic-info
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "quote": "The Lord is my shepherd, I lack nothing",
+  "work": "",
+  "school": "Unifacs",
+  "location": "Salvador, Bahia"
+}
+
+###
+PUT {{baseUrl}}/{{urlPath}}/user/profile/social-links
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "instagram": "",
+  "twitter": "",
+  "facebook": "https://www.facebook.com/gitlab",
+  "youtube": "https://www.youtube.com"
+}
+
+###
+PUT {{baseUrl}}/{{urlPath}}/user/profile/settings
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "messages": true,
+  "reactions": false,
+  "comments": true,
+  "follows": false
+}
