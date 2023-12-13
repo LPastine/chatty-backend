@@ -30,3 +30,54 @@ GET {{baseUrl}}/{{urlPath}}/user/profile/search/Luciano
 Content-Type: application/json
 Accept: application/json
 withCredentials: true
+
+###
+PUT {{baseUrl}}/{{urlPath}}/user/profile/change-password
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "currentPassword": "karlinha",
+  "newPassword": "karla111",
+  "confirmPassword": "karla111"
+}
+
+###
+PUT {{baseUrl}}/{{urlPath}}/user/profile/basic-info
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "quote": "The Lord is my shepherd, I lack nothing",
+  "work": "",
+  "school": "Unifacs",
+  "location": "Salvador, Bahia"
+}
+
+###
+PUT {{baseUrl}}/{{urlPath}}/user/profile/social-links
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "instagram": "",
+  "twitter": "",
+  "facebook": "https://www.facebook.com/gitlab",
+  "youtube": "https://www.youtube.com"
+}
+
+###
+PUT {{baseUrl}}/{{urlPath}}/user/profile/settings
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "messages": false,
+  "reactions": false,
+  "comments": false,
+  "follows": false
+}
