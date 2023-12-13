@@ -24,3 +24,9 @@ GET {{baseUrl}}/{{urlPath}}/user/profile/user/suggestions
 Content-Type: application/json
 Accept: application/json
 withCredentials: true
+
+###
+GET {{baseUrl}}/{{urlPath}}/user/profile/search/Luciano
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
