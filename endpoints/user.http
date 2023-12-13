@@ -76,8 +76,8 @@ Accept: application/json
 withCredentials: true
 
 {
-  "messages": false,
+  "messages": true,
   "reactions": false,
-  "comments": false,
+  "comments": true,
   "follows": false
 }
