@@ -34,6 +34,22 @@ withCredentials: true
 }
 
 ###
+POST {{baseUrl}}/{{urlPath}}/post/video/post
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "post": "Comment notification test post 2",
+  "bgColor": "#ffffff",
+  "privacy": "Public",
+  "gifUrl": "",
+  "profilePicture": "http://res.cloudinary.com/dhta9awgo/image/upload/v1695675720/6511f546dfe510c8e151fdb5",
+  "feelings": "",
+  "video": ""
+}
+
+###
 GET {{baseUrl}}/{{urlPath}}/post/all/1
 Content-Type: application/json
 Accept: application/json
