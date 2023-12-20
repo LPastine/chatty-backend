@@ -39,7 +39,7 @@ describe('Update', () => {
       jest.spyOn(postServer.socketIOPostObject, 'emit');
       jest.spyOn(postQueue, 'addPostJob');
 
-      await Update.prototype.post(req, res);
+      await Update.prototype.posts(req, res);
       expect(postSpy).toHaveBeenCalledWith(`${postMockData._id}`, updatedPost);
       expect(postServer.socketIOPostObject.emit).toHaveBeenCalledWith('update post', postMockData, 'posts');
       expect(postQueue.addPostJob).toHaveBeenCalledWith('updatePostInDB', { key: `${postMockData._id}`, value: postMockData });
